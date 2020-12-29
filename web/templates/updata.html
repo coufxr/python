@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改数据</title>
+</head>
+<body>
+    <form method="post">
+        {% for edidata in datalist %}
+            <p>id：<input value="{{ edidata.id}}" id="id" ></p>
+            <p>用户名：<input value="{{ edidata.name}}" id="name"></p>
+            <p>密码：<input value="{{ edidata.password}}" id="password"></p>
+            <p><button type="submit" onclick="updata()">提交</button></p>
+        {% endfor %}
+    </form>
+</body>
+    <script type="text/javascript" src="/static/login/js/jquery.js"></script>
+    <script>
+        function updata() {
+            var id = $.trim($('#id').val());
+        var name = $.trim($('#name').val());
+        var password = $.trim($('#password').val());
+        var ldata = {id:id,username:name,password:password};
+        $.ajax({
+            url: '/updata/',
+            type: 'post',
+            dataType: 'json',
+            async: true,
+            data: ldata,
+            success:function(data){
+                if (data !=="") {
+                    window.location.href=data['data'];//需要跳转的地址
+                    console.log(data)
+                }
+            },
+            error:function(){
+            }
+        });
+        }
+
+    </script>
+</html>

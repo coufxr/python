@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link type="text/css" rel="stylesheet" href="/static/css/Login_Registered.css">
+		<script src="/static/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="login">
+			<div class="denglu">
+				<form role="form" class="myform" action="/login/" onsubmit="return login()">
+					<p>
+						<label for=" username">账号：</label>
+						<input type="text" id="username" class="input" value="" placeholder="请输入账号:" />
+					</p>
+					<p>
+						<label for="userpwd">密码：</label>
+						<input type="password" id="userpwd" class="input" value="" placeholder="请输入密码:" />
+					</p>
+
+					<div class="Registered_box" style="display: none;" id="reg">
+						<p>
+							<label for="email">邮箱：</label>
+							<input type="email" id="email" class="input" value="" placeholder="请输入邮箱:" />
+						</p>
+						<p>
+							<label for="yanzhen">验证码：</label>
+							<input type="number" id="yanzhen" class="input" value="" placeholder="请输入验证码:" />
+						</p>
+					</div>
+					<p class="check_box">
+						<input name="" type="checkbox" value="" checked="checked">
+						<span>已阅读并同意
+							<a href="javascript:void[0];" target="_blank">
+								<span class="lan">《XXXXX使用协议》</span>
+							</a>
+						</span>
+					</p>
+					<p class="center">
+						<button type="submit" class="btn">登录</button>
+					</p>
+
+				</form>
+				<p class="zhuce">
+					<a href="javascript:void[0];">还没有账号？点此注册账户！</a>
+					<span class="teg">true</span>
+				</p>
+
+			</div>
+		</div>
+		<div class="fh">
+			<a href="/index/">返回首页</a>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".zhuce .teg").hide();
+		$(".zhuce a").click(function () {
+			if ($(".Registered_box").css("display") === "none") {
+				$(".Registered_box").css("display", "block");
+				$(".btn").html("注册");
+				$(".zhuce a").html("已有账号？点此登录！");
+				$(".zhuce .teg").text("false")
+			} else {
+				$(".Registered_box").css("display", "none");
+				$(".btn").html("登录");
+				$(".zhuce a").html("还没有账号？点此注册账户！");
+				$(".zhuce .teg").text("true")
+			}
+
+		});
+
+		function login() {
+			var name = $("#username").val();
+			var pwd = $("#userpwd").val();
+			var email = $("#email").val();
+			var yzcode = $(".yanzhen").val();
+			var rl_code = $(".teg").text();
+			// alert(yzcode)
+			if ($(".teg").text() === "false") {
+				var reg_list = {
+					"username": name,
+					"userpwd": pwd,
+					"useremail": email,
+					"rl_code": rl_code
+				};
+				// alert(datelist)
+				if (yzcode === "") {
+					alert("验证码错误！！！");
+					return false;
+				} else {
+					$.ajax({
+						url: '/login/',
+						type: 'post',
+						dataType: 'json',
+						async: true,
+						data: reg_list,
+						success: function (data) {
+                            if (data.msg=="ok"){
+                                alert("注册成功,密码已发到你的邮箱,请查收.");
+							    window.location.href = data.data; //需要跳转的地址
+                            }else{
+								alert(data.err);
+								window.location.href = data.data; //需要跳转的地址
+							}
+						},
+						error: function () {
+						    alert("提交错误！！")
+                        }
+					});
+				}
+			} else {
+				//登录验证
+				if (name === "" || name.length < 6) {
+					alert("账号错误！！！");
+					return false;
+				}
+				if (pwd === "" || pwd.length < 6) {
+					alert("密码错误！！！");
+					return false;
+				}
+				var login_list = {
+					"username": name,
+					"userpwd": pwd,
+					"rl_code": rl_code
+				};
+				$.ajax({
+					url: '/login/',
+					type: 'post',
+					dataType: 'json',
+					async: true,
+					data: login_list,
+					success: function (data) {
+						if (data.msg == "ok") {
+							alert(data.data);
+							$(window).attr("location", data.data);
+							window.Location.href = data.data; //需要跳转的地址
+							// $.cookie(name, {
+							// 	"name": name,
+							// 	"yzcookie": data.cookie_list
+							// }, {
+							// 	expires: 7,
+							// 	path: '/'
+							// });
+						} else {
+							alert("登录失败！！");
+						}
+					},
+					error: function () {}
+				});
+
+			}
+			return false;
+		}
+	</script>
+
+</html>

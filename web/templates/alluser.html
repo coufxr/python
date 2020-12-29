@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全部用户</title>
+</head>
+<body>
+    <form action="/alluser/" method="post" class="userform">
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>用户名</th>
+                <th>密码</th>
+                <th>操作</th>
+            </thead>
+            {% for data in datalist %}
+                <tr>
+                    <td>{{ data.id}}</td>
+                    <td>{{ data.name }}</td>
+                    <td>{{ data.password }}</td>
+                    <td>
+                        <a href="/updata/?nid={{ data.id }}&name={{ data.name }}">修改</a>  |
+                        <a href="/deldata/?nid={{ data.id }}">删除</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </form>
+</body>
+</html>

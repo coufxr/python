@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>分类</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/fl.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="myiframe">
+			<iframe src="/nav/"  frameborder="no" width="100%" scrolling="no" height="52px"></iframe>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box">
+					<h3>分类：</h3>
+					<div class="box_a">
+						<div class="box1">
+							<a href="javascript:;">玄幻</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">奇幻</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">魔幻</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">武侠</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">仙侠</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">都市</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">现实</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">军事</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">历史</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">游戏</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">体育</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">科幻</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">悬疑</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">灵异</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">恐怖</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">校园</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">耽美</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">同人</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">女生网</a>
+						</div>
+						<div class="box1">
+							<a href="javascript:;">二次元</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 fl-box">
+				<div class="col-md-3">
+					<div class="book-list">
+						<h3>潜力棒：</h3>
+						<ul>
+							<li>
+								<div class="book-info">
+									<h3>NO.1</h3>
+									<h4><a href="" target="_blank">我是小说名</a></h4>
+									<p class="digital"><em>308756</em>潜力值</p>
+									<p class="author">
+										<a class="type" href="" target="_blank">异术超能</a>
+										<i>·</i>
+										<a class="writer" href="" target="_blank">怒笑</a>
+									</p>
+								</div>
+								<div class="book-cover">
+									<a class="link" href="javascript:;" target="_blank">
+										<img src="/static/img/xs/xxx_xs.jpg" alt=" 我是小说名">
+									</a>
+									<span></span>
+								</div>
+							</li>
+							<li class="book-ol">
+								<div class="num-box">
+									<span class="num2">2</span>
+								</div>
+								<div class="name-box">
+									<a class="name" href="" target=" _blank">这就是等价交换</a>
+									<i class="total">192432</i>
+								</div>
+							</li>
+							<li class="book-ol">
+								<div class="num-box">
+									<span class="num3">3</span>
+								</div>
+								<div class="name-box">
+									<a class="name" href=""target=" _blank">xxxxxxxxxxxxx</a>
+									<i class="total">xxxxxx</i>
+								</div>
+							</li>
+                            {% for bd in bdlist %}
+                                <li class="book-ol">
+								<div class="num-box">
+									<span class="">{{ bd }}</span>
+								</div>
+								<div class="name-box">
+									<a class="name" href=""target=" _blank">xxxxxxxxxxxxx</a>
+									<i class="total">xxxxxx</i>
+								</div>
+							</li>
+                            {% endfor %}
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-9 ">
+                    <div class="book-blank-box fl">
+                        <div class="top-title ">
+                            <div class="title">新书精选</div>
+                        </div>
+                        <div class="mind-showbook ">
+                             {% for date in xh_showbook %}
+                                 <div class="mind-book">
+                                     <div class="imgbox img-book fl">
+                                         <a href="javascript:[0];" target="_blank">
+                                             <img src="/static/img/xs/xxx_xs.jpg" alt="余生半甲子" target="_blank">
+										</a>
+									</div>
+									<div class="book-info book-info1 fr">
+										<div class="bookname">
+											<a href="" target="_blank">余生半甲子</a>
+										</div>
+										<p class="info">
+											<a href="" target="_blank">入了江湖，踏了山河，行了半生，不知藏几分凄楚。</a>
+										</p>
+										<div class="author">
+											<a href="" target="_blank">书小道</a>
+										</div>
+										<div class="updatenum">日更{{ date }}千</div>
+									</div>
+								</div>
+                             {% endfor %}
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="top-two-blank ">
+					<div class="blank-left fl">
+						<div class="top-title ">
+							<div class="title">经典完本</div>
+							<div class="compile">
+								<div class="swiper-wrapper small-swiper">
+									<div class="wb-img">
+										<a href="javascript:;[0]"><img src="/static/img/xs/xxx_xs.jpg" /></a>
+									</div>
+									<div class="swiper-book swiper-infobox">
+										<div class="itemInfo">
+											<a href="" class="name" target="_blank">修真世界</a>
+											<a href="" class="author-text" target="_blank">方想</a>
+											<a
+												class="intr-text">左莫，无空剑门毫不起眼的外门弟子，最大的愿望就是拥有无限的晶石，想尽法子的赚石，无意间却闯入奇异修真世界。我心中的仙侠！看书的朋友，请多多注册、收藏、投票，我需要你的支持！谢谢！</a>
+											<a href="" class="a-link animation_opacity" target="_blank">立即阅读</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="blank-mid fl">
+						<div class="tab-lists-two">
+							<div class="top-title clearfix">
+								<div class="title fl">品书试读</div>
+							</div>
+							<div class="mind-showbook clearfix ">
+                                {% for ps in pslist %}
+                                    <div class="mind-book pingshu">
+                                        <div class="imgbox img-book fl">
+                                            <a href="" target="_blank">
+                                                <img src="/static/img/xs/xxx_xs.jpg" alt="" target="_blank">
+                                            </a>
+                                        </div>
+                                        <div class="book-info fr">
+                                            <div class="bookname">
+                                                <a href="" target="_blank">寻龙迷踪</a>
+                                            </div>
+                                            <p class="info">
+                                                <a target="_blank">门派齐聚华山，阴谋揭幕</a>
+                                            </p>
+                                            <div class="author">
+                                                <a href="" target="_blank" alt="">唐家太公</a></div>
+                                            <div class="cate">
+                                                <a href="" target="_blank">新派武侠</a>
+                                            </div>
+                                        </div>
+								    </div>
+                                {% endfor %}
+
+							</div>
+							<div class="link clearfix">
+
+								<p>
+									<a href="" class="bookclass classify" target="_blank">[奇幻修真]</a>
+									<a href="" class="bookname no-wrap" title="太上仙魔录"
+										target="_blank">太上仙魔录：大道争锋，我为帝尊！</a>
+								</p>
+								<p>
+									<a href="" class="bookclass classify" target="_blank">[我是类型]</a>
+									<a href="" class="bookname no-wrap" title="我是书名" target="_blank">我是书名：我是简介！</a>
+								</p>
+								<p>
+									<a href="" class="bookclass classify" target="_blank">[我是类型]</a>
+									<a href="" class="bookname no-wrap" title="我是书名" target="_blank">我是书名：我是简介！</a>
+								</p>
+								<p>
+									<a href="" class="bookclass classify" target="_blank">[我是类型]</a>
+									<a href="" class="bookname no-wrap" title="我是书名" target="_blank">我是书名：我是简介！</a>
+								</p>
+								<p>
+									<a href="" class="bookclass classify" target="_blank">[我是类型]</a>
+									<a href="" class="bookname no-wrap" title="我是书名" target="_blank">我是书名：我是简介！</a>
+								</p>
+								<p>
+									<a href="" class="bookclass classify" target="_blank">[我是类型]</a>
+									<a href="" class="bookname no-wrap" title="我是书名" target="_blank">我是书名：我是简介！</a>
+								</p>
+
+
+
+							</div>
+						</div>
+					</div>
+					<div class="blank-right fr">
+						<div class="tab-lists">
+							<div class="top-title clearfix">
+								<div class="title fl">用户推荐榜</div>
+								<div class="more fr">
+									<a class="more-link" href="" target="_blank">更多</a></div>
+							</div>
+							<div class="h10-blank"></div>
+							<div class="lists">
+								<ul>
+
+									<li>
+										<div class="imgbox fl">
+											<a href="" target="_blank">
+												<img src="/static/img/xs/xxx_xs.jpg" alt="平天策">
+											</a>
+										</div>
+										<em class="top1 ">
+											<h3>NO.1</h3>
+										</em>
+										<a class="title" href="" target="_blank" title="平天策">平天策</a>
+										<a class="author" href="" target="_blank" title="无罪">无罪</a>
+										<span>92604&nbsp;推荐票</span>
+									</li>
+
+									<li class="book-ol">
+										<div class="num-box">
+											<span class="num2">2</span>
+										</div>
+										<div class="name-box">
+											<a class="name" href=""target=" _blank">xxxxxxxxxxxxx</a>
+											<i class="total">xxxxxx</i>
+										</div>
+									</li>
+									<li class="book-ol">
+										<div class="num-box">
+											<span class="num3">3</span>
+										</div>
+										<div class="name-box">
+											<a class="name" href=""target=_blank">xxxxxxxxxxxxx</a>
+											<i class="total">xxxxxx</i>
+										</div>
+									</li>
+                                    {% for bd in bdlist %}
+                                        <li class="book-ol">
+										<div class="num-box">
+											<span class="">{{ bd }}</span>
+										</div>
+										<div class="name-box">
+											<a class="name" href=""target=_blank">xxxxxxxxxxxxx</a>
+											<i class="total">xxxxxx</i>
+										</div>
+									</li>
+                                    {% endfor %}
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<iframe src="/footer/" frameborder="0" width="100%" height="160px" scrolling="no"></iframe>
+	</div>
+</body>
+
+</html>

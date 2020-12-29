@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>nav</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+	<script src="/static/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<a href="/index/" class="navbar-brand" target="_parent">欢迎来到书店！！</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target="#sbj">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="sbj">
+			<ul class="nav navbar-nav">
+				<li><a href="/index/" target="_parent">首页</a></li>
+				<li><a href="/fl/" target="_parent">分类</a></li>
+				<li><a href="/lt/" target="_parent">论坛</a></li>
+				<li><a href="javascript:;" id="me">我的</a></li>
+				<li><a href="/wuliu/" target="_parent">物流</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/login/" target="_parent" id="login">登录/注册</a></li>
+			</ul>
+			<form action="##" class="navbar-form navbar-right" rol="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="请输入关键词" /></div>
+				<a type="submit" class="btn btn-default" href="/sos/" target="_parent">
+					<span class="glyphicon glyphicon-search"></span>搜索
+				</a>
+			</form>
+		</div>
+	</nav>
+</body>
+<script type="text/javascript">
+	$("#me").click(function () {
+		if ($("#login").html() == "登录/注册") {
+			alert("请登录，登录后才可查看！");
+		}
+	});
+	//以下需要在相同域内才可使用。
+	var data = $(parent.document).find("title").text();//获取父页面的title名
+	if (data == "书店") {//给首页添加active
+		$(".nav li").eq(0).addClass("active").siblings(li).removeClass("active");
+	}
+	for (i = 1; i < $(".nav li a").length; i++) {//循环判断nav内的名是否与父页面title名相同
+		var li = $(".nav li a").eq(i).text();
+		if (li == data) {//相同则添加active
+			$(".nav li").eq(i).addClass("active").siblings(li).removeClass("active");
+			// console.log(data);//方便调试所写
+			// console.log(li);
+		}
+	}
+</script>
+</html>

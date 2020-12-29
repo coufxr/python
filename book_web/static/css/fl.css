@@ -1,0 +1,525 @@
+.myiframe {
+    margin: 0 -15px;
+}
+
+.box {
+    overflow: hidden;
+}
+
+.box h3 {
+    text-indent: 1em;
+}
+
+.box_a {
+    width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.box a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 100px;
+    color: #FFFFFF;
+    background: #296acc;
+    margin: 5px;
+    float: left;
+    /* border-radius: 3px; */
+}
+
+.box a:hover {
+    background: #3773cf;
+    color: #e7eef9;
+    text-decoration: none;
+    border: 3px #9dbae7 solid;
+}
+
+.fl-box {
+    margin-bottom: 20px;
+}
+
+/* book-list */
+.book-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.book-list ul li {
+    overflow: hidden;
+}
+
+.book-list ul li:first-of-type {
+    border-top: 1px #222222 solid;
+    border-bottom: 1px #cccccc solid;
+}
+
+.book-list ul li a {
+    text-decoration: none;
+    color: #1A1A1A;
+}
+
+.book-list ul li a:hover {
+    color: #BF2C24;
+}
+
+.book-info {
+    float: left;
+    margin: 3px;
+}
+
+.book-info h3 {
+    font: 700 14px/18px Arial;
+    width: 36px;
+    height: 18px;
+    margin-bottom: 3px;
+    text-align: center;
+    color: #fff;
+    background: #ff3335;
+}
+
+.book-wrap .book-info h4 {
+    overflow: hidden;
+    height: 24px;
+    color: #1a1a1a;
+}
+
+.book-info p.digital {
+    font-size: 12px;
+    overflow: hidden;
+    height: 24px;
+    margin-bottom: 4px;
+    padding: 3px 0 0;
+    color: #bf2c24;
+}
+
+.book-info p.digital em {
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+p.author {
+    font-size: 12px;
+    overflow: hidden;
+    height: 16px;
+}
+
+p.author a {
+    color: #a6a6a6;
+}
+
+.book-cover {
+    float: right;
+    width: 32%;
+    margin-top: 6px;
+    margin-right: 8px;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+}
+
+.book-ol {
+    height: 31px;
+    border-bottom: 1px #CCCCCC solid;
+}
+
+.book-ol .num-box {
+    float: left;
+    width: 28px;
+    height: 32px;
+}
+
+.num-box span.num2 {
+    color: #fff;
+    background: #F4A460;
+}
+
+.num-box span.num3 {
+    color: #fff;
+    background: #FFD700;
+}
+
+.num-box span {
+    font: 700 14px/16px Arial;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: 8px;
+    text-align: center;
+    color: #666;
+    background: #ededed;
+}
+
+.name-box {
+    position: relative;
+    float: left;
+    width: 86%;
+    height: 30px;
+}
+
+.name-box a.name {
+    height: 31px;
+    line-height: 32px;
+    color: #1a1a1a;
+}
+
+.name-box i.total {
+    font: 12px/32px Simsun;
+    float: right;
+    overflow: hidden;
+    width: 72px;
+    text-align: right;
+    color: #b3b3b3;
+}
+
+.tab-lists-two .top-title {
+    font-size: 20px;
+    font-weight:bold; 
+    line-height: 56px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.top-title .title {
+    font-size: 20px;
+}
+
+.book-blank-box .mind-book {
+    margin-right: 19px;
+}
+
+.book-blank-box .mind-book {
+    width: 256px;
+}
+
+.mind-book {
+    float: left;
+    width: 256px;
+    height: 110px;
+    margin: 29px 0 0;
+}
+
+.mind-book .img-book,
+.top-book .imgbox {
+    width: 75px;
+    height: 101px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.imgbox {
+    font-size: 0;
+    line-height: 0;
+}
+
+.imgbox a img {
+    width: 100%;
+
+}
+
+.fl {
+    float: left;
+}
+
+.mind-book .book-info1 {
+    width: 205px;
+}
+
+.mind-book .book-info {
+    width: 156px;
+    height: 103px;
+    position: relative;
+}
+
+.fr {
+    float: right;
+}
+
+.mind-book .book-info .bookname {
+    line-height: 21px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 7px;
+    overflow: hidden;
+
+}
+
+.mind-book .bookname a {
+    color: #333;
+}
+
+a,
+a:active,
+a:hover,
+a:link {
+    text-decoration: none;
+}
+
+.mind-book .book-info .info {
+    color: #444;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.mind-book .book-info .author {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 13px;
+    color: #999;
+    width: 125px;
+    overflow: hidden;
+}
+
+.mind-book .book-info .updatenum {
+    color: #fc7403;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    line-height: 20px;
+    border: 1px solid #fdd5b3;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+.blank-left,
+.blank-right {
+    width: 236px;
+}
+
+.blank-mid {
+    width: 54%;
+    margin-left: 26px;
+}
+
+.pingshu {
+    width: 307.5px;
+    padding: 0 3px 0;
+}
+
+.pingshu .book-info {
+    width: 200px;
+}
+
+.title {
+    font-family: MicrosoftYaHei;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 1px;
+    line-height: 40px;
+}
+
+.compile {
+    height: 402px;
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+    border: 1px solid #f0f0f0;
+}
+
+.compile .wb-img {
+    text-align: center;
+}
+
+.compile .wb-img img {
+    width: 100px;
+    margin: 15px 0;
+}
+
+.swiper-container1 {
+    position: relative;
+    margin-top: 5px;
+}
+
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+.compile .name {
+    display: block;
+    margin: 0 0 5px 0;
+    padding: 0 30px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 24px;
+    overflow: hidden;
+    color: #333;
+}
+
+.compile .author-text {
+    display: block;
+    margin-bottom: 3px;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+
+.compile .intr-text {
+    display: block;
+    height: 125px;
+    padding: 0 20px;
+    overflow: hidden;
+    color: #666;
+    font-size: 13px;
+    text-indent: 2em;
+}
+
+.compile .a-link {
+    display: block;
+    margin: 8px auto;
+    width: 115px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    background: #d32f2f;
+    border-radius: 2px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.link,a {
+    color: #333;
+    text-decoration: none;
+}
+
+.mind-book .book-info .cate {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    line-height: 20px;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+.tab-lists-two .link {
+    margin-top: 30px;
+    height: 105px;
+}
+
+.tab-lists-two .link p {
+    float: left;
+    width: 305px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.tab-lists-two .link .bookclass {
+    float: left;
+    margin: 0 5px 0 0;
+    color: #999;
+}
+
+.link .bookname {
+    display: inline-block;
+    width: 235px;
+}
+
+.tab-lists {
+    padding: 15px 15px 13px;
+    border: 1px solid #f0f0f0;
+}
+
+.tab-lists .top-title {
+    line-height: 20px;
+}
+
+.tab-lists li:first-child {
+    height: 88px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tab-lists .list-a,
+.tab-lists li {
+    line-height: 32px;
+    border-bottom: 1px dashed #ccc;
+    font-size: 14px;
+    height: 32px;
+    overflow: hidden;
+}
+
+.tab-lists .top-title .title {
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.more .more-link {
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 1px;
+    line-height: 26px;
+    padding-right: 8px;
+}
+
+.h10-blank {
+    height: 10px;
+}
+
+.tab-lists ul {
+    padding: 0px;
+}
+
+.tab-lists li:first-child .imgbox {
+    height: 68px;
+    width: 51px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tab-lists li .top1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
+
+.tab-lists li .top1 h3 {
+    font: 700 14px/18px Arial;
+    width: 36px;
+    height: 18px;
+    margin-bottom: 3px;
+    text-align: center;
+    color: #fff;
+    background: #ff3335;
+}
+
+.tab-lists li:first-child .title {
+    position: absolute;
+    left: 63px;
+    top: 0;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.tab-lists li:first-child .author {
+    position: absolute;
+    left: 63px;
+    top: 24px;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+.tab-lists li:first-child span {
+    position: absolute;
+    left: 63px;
+    top: 46px;
+}

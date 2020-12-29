@@ -1,0 +1,25 @@
+
+
+#copyright{
+	width: 100%;
+	background: #5BC0DE;
+	padding-bottom: 15px;
+}
+
+.copyright_linkbox{
+	overflow: hidden;
+}
+.copyright_linkbox .links{
+	width: 688px;
+	margin: 10px auto;
+}
+.links a{
+	display: inline-block;
+	margin: 2px;
+	padding: 1px;
+}
+
+.copyright p{
+	text-align: center;
+	font-size: 13.5px;
+}

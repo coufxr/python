@@ -1,0 +1,178 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.iframe_top {
+	margin: 0 -15px;
+}
+
+#lgw {
+	min-width: 96px;
+	text-align: center;
+}
+
+.banbox {
+	width: 1170px;
+	overflow: hidden;
+	position: relative;
+}
+
+.banner {
+	position: absolute;
+	left: 50%;
+	margin-left: -960px;
+}
+.huabu {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 1170px;
+	height: 400px;
+}
+.nr {
+	margin-top: 15px;
+}
+.nr .col-md-3 li{
+	border-radius: 3px;
+	background: #CCCCCC;	
+	text-align: center;
+}
+.panel-body {
+	height: 425px;
+}
+
+.panel-body p {
+	margin: 5px 0;
+	text-align: left;
+	text-indent: 2em;
+}
+
+#xiaoshuoX img {
+	/* max-width: 230px;
+	min-height: 313px; */
+	width: 100%;
+}
+
+.star .dhbox {
+	display: none;
+}
+
+.star .act {
+	display: block;
+	/* height: 1058.5px; */
+}
+
+.xx2 .col-md-4 .list {
+	width: 216px;
+	margin: 0 auto;
+	position: relative;
+	padding: 8px 0;
+}
+
+.xx2 .col-md-4 .list img {
+	width: 216px;
+}
+
+.xx2 .col-md-4 .list p {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 16px;
+	text-indent: 2em;
+}
+
+.xx2 .col-md-4 .list-text {
+	position: absolute;
+	left: 0;
+	top: 8px;
+	width: 216px;
+	height: 288px;
+	background-color: rgba(0, 0, 0, .6);
+	transform: rotateY(90deg);
+	transition: 0.5s;
+}
+
+.xx2 .col-md-4:hover .list-text {
+	transform: rotateY(0deg);
+}
+
+.title {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.partner a {
+	display: inline-block;
+	margin: 2px 3px 2px 0;
+	padding: 2px;
+	color: #CCCCCC;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.partner a:hover {
+	text-decoration: none;
+	color: crimson;
+}
+
+.partner_huoban {
+	padding-bottom: 6px;
+	margin-bottom: 6px;
+	border-bottom: 1px #c9c9c9 solid;
+}
+
+.partner_huoban a {
+	color: black;
+}
+
+.partner_huoban a:hover {
+	color: coral;
+}
+
+.pn {
+	margin: 5px 0;
+	background: #80BDFF;
+	border-radius: 10px;
+	padding: 20px;
+	margin-top: 10px;
+}
+
+.pn li {
+	border-bottom: 1px solid #000000;
+	padding: 3px 0;
+	margin: 0;
+	padding-left: 20px;
+}
+
+.pn li a img {
+	max-width: 50px;
+	margin: 5px 0;
+}
+
+.pn h4 {
+	padding: 8px 0;
+	margin: 0;
+}
+
+.dc {
+	float: right;
+	padding: 0 8px;
+}
+
+.dc span {
+	padding: 0 5px;
+}
+
+.dc a {
+	color: #F0AD4E;
+}
+
+.hf textarea {
+	width: 100%;
+}
+.fybox{
+	clear: both;
+	width: 512px;
+	margin: 0 auto;
+}

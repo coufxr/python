@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58f601b0-adcf-425c-9d26-21cd479ccf57" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/tieba$down.coverage" NAME="down Coverage Results" MODIFIED="1549605338863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="tieba" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>F:\document\python</dir>
+    </dirStrings>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="95" />
+    <option name="y" value="21" />
+    <option name="width" value="1742" />
+    <option name="height" value="989" />
+  </component>
+  <component name="ProjectId" id="1YqHB4Q0jjW6AwBJT1co455nvOi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../django_web" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="down" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tieba" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/down.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.down" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58f601b0-adcf-425c-9d26-21cd479ccf57" name="Default Changelist" comment="" />
+      <created>1549604465156</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549604465156</updated>
+      <workItem from="1562595137167" duration="201000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="201000" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="174" key="FileChooserDialogImpl" timestamp="1584156883954">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="174" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1584156883954" />
+    <state width="1515" height="213" key="GridCell.Tab.0.bottom" timestamp="1584156885899">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584156885899" />
+    <state width="1515" height="213" key="GridCell.Tab.0.center" timestamp="1584156885899">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584156885899" />
+    <state width="1515" height="213" key="GridCell.Tab.0.left" timestamp="1584156885898">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584156885898" />
+    <state width="1515" height="213" key="GridCell.Tab.0.right" timestamp="1584156885899">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584156885899" />
+    <state width="1515" height="265" key="GridCell.Tab.1.bottom" timestamp="1583666166399">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1583666166399" />
+    <state width="1515" height="265" key="GridCell.Tab.1.center" timestamp="1583666166399">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1583666166399" />
+    <state width="1515" height="265" key="GridCell.Tab.1.left" timestamp="1583666166399">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1583666166399" />
+    <state width="1515" height="265" key="GridCell.Tab.1.right" timestamp="1583666166399">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1583666166399" />
+    <state x="272" y="62" key="SettingsEditor" timestamp="1584087570358">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="272" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584087570358" />
+    <state x="461" y="244" key="com.intellij.ide.util.TipDialog" timestamp="1584080542028">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="461" y="244" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584080542028" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>书店</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/index.css" />
+		<script src="/static/js/jquery-3.2.1.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+            <div class="iframe_top">
+                <iframe src="/nav/" frameborder="no" width="100%" scrolling="no" height="52px"></iframe>
+            </div>
+
+			<div class="row banbox">
+				<div class="col-md-12 banner">
+					<img src="/static/img/banner_img.jpg" />
+				</div>
+				<div class="huabu">
+					<canvas id="canvas"></canvas>
+				</div>
+			</div>
+
+			<div class="row nr">
+				<div role="navigation" class="col-md-3">
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation" class="active"><a href="##">热门小说</a></li>
+						<li role="presentation"><a href="##">新书</a></li>
+						<li role="presentation"><a href="##">男频</a></li>
+						<li role="presentation"><a href="##">女频</a></li>
+						<li role="presentation"><a href="##">大神</a></li>
+						<li role="presentation"><a href="##">留言</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-9 star">
+					<div class="dhbox act">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="panel panel-danger text-center " id="xiaoshuoX">
+									<div class="panel-heading ">剑来</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/jl.jpg" />
+										<p>大千世界，无奇不有。我陈平安，唯有一剑，可搬山，倒海，降妖，镇魔，敕神，摘星，断江，摧城，开天！</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-primary text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">点到为止</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/ddwz.jpeg" />
+										<p>功夫究竟是什么？ 花架子还是杀人技？ 止戈为武，点到为止。 “你若无敌，将会如何？” “得饶人处且饶人。”</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-info text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">雪中悍刀行</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xzhdx.jpeg" />
+										<p>江湖是一张珠帘。 大人物小人物，是珠子，大故事小故事，是串线。 情义二字，则是那些珠子的精气神。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4">
+								<div class="panel panel-success text-center " id="xiaoshuoX">
+									<div class="panel-heading ">人间最得意</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/rjzdy.jpeg" />
+										<p>那少年提剑时曾笑言：天地虽大，我只一剑。只不过这一剑气长九万里。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-warning text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">绝命诡案</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/jmga.jpeg" />
+										<p>每每一个案件的出现，镜子前面那陌生的自己就开始惶恐不安。 只有自己面对自己的时候才会恐慌，你们心里有秘密吗？痛苦吗？</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-info text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">概率之外</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/glzw.jpeg" />
+										<p>冷酷严明的未来世界，身着黑衣的死神带来最无情的问候。“让一切，在概率之外”</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读
+											<span class="badge badge-success">18+</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="xx2 dhbox">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="list">
+									<img src="/static/img/xs/xs1.jpg" alt="" />
+									<div class="list-text">
+										<p>心潮澎湃，无限幻想，迎风挥击千层浪，少年不败热血！</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="list">
+									<img src="/static/img/xs/xs2.jpg" alt="" />
+									<div class="list-text">
+										<p>算命探险点风水，惊悚侦探降鬼怪，最传统中国文化，最神秘灵异传奇！</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="list">
+									<img src="/static/img/xs/xs3.jpg" alt="" />
+									<div class="list-text">
+										<p>肆意挥洒激情的游戏人生，打破现实框架的无尽幻想！</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="list">
+									<img src="/static/img/xs/xs4.jpg" alt="" />
+									<div class="list-text">
+										<p>这是一个小人物，慢慢向上攀爬奋斗的故事~</p>
+										　　 <p>…………</p>
+										　　 <p>有欢笑，有泪水，还有感动…… </p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="list">
+									<img src="/static/img/xs/xs5.jpg" alt="" />
+									<div class="list-text">
+										<p>修仙觅长生，热血任逍遥，踏莲曳波涤剑骨，凭虚御风塑圣魂！</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="list">
+									<img src="/static/img/xs/xs6.jpg" alt="" />
+									<div class="list-text">
+										<p>醒掌天下权，醉卧美人膝，五千年风华烟雨，是非成败转头空！</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="list">
+									<img src="/static/img/xs/xs7.jpg" alt="" />
+									<div class="list-text">
+										<p>心潮澎湃，无限幻想，迎风挥击千层浪，少年不败热血！</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="list">
+									<img src="/static/img/xs/xs8.jpg" alt="" />
+									<div class="list-text">
+										<p>算命探险点风水，惊悚侦探降鬼怪，最传统中国文化，最神秘灵异传奇！</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="list">
+									<img src="/static/img/xs/xs9.jpg" alt="" />
+									<div class="list-text">
+										<p>天地异变，灵气复苏！</p>
+										<p>这是一个全新的大时代，前所未有的神话盛世正在产生。</p>
+										<p>在这乱世格局之中，后世诸天万界共尊的无上天尊重新回到了盛世之初。</p>
+										<p>最初陆轩只想改变曾经所有的不平，却不想，走出了一条无敌之路！</p>
+										<p>我重生了，也变强了！
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="dhbox">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="panel panel-danger text-center " id="xiaoshuoX">
+									<div class="panel-heading ">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-primary text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-info text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4">
+								<div class="panel panel-success text-center " id="xiaoshuoX">
+									<div class="panel-heading ">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-warning text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-info text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读
+											<span class="badge badge-success">18+</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dhbox">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="panel panel-danger text-center " id="xiaoshuoX">
+									<div class="panel-heading ">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-primary text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-info text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4">
+								<div class="panel panel-success text-center " id="xiaoshuoX">
+									<div class="panel-heading ">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-warning text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-info text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读
+											<span class="badge badge-success">18+</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dhbox">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="panel panel-danger text-center " id="xiaoshuoX">
+									<div class="panel-heading ">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-primary text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-info text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4">
+								<div class="panel panel-success text-center " id="xiaoshuoX">
+									<div class="panel-heading ">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-warning text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-info text-center" id="xiaoshuoX">
+									<div class="panel-heading border-dark">xxxxxxx</div>
+									<div class="panel-body">
+										<img src="/static/img/xs/xxx.jpeg" />
+										<p>网络小说是依托网络基础平台，由网络作家发表的小说。它是随着网络的快速发展而出现的一种新兴小说类型。</p>
+									</div>
+									<div class="panel-footer border-dark">
+										<a href="##" class="card-link">点击阅读
+											<span class="badge badge-success">18+</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="dhbox">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="pn">
+									<h3>留言区：</h3>
+									<ul class="media-list">
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="alax"
+												data-content="万水千山总是情">
+												<img class="media-object" src="/static/img/tx/tx1.gif" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">alax</h4>
+												<div>
+													搜索功能挺实用
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="海阔天空"
+												data-content="黄河远上白云间">
+												<img class="media-object" src="/static/img/tx/tx2.jpg" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">海阔天空</h4>
+												<div>
+													结果全面
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="青山"
+												data-content="一片孤城万仞山">
+												<img class="media-object" src="/static/img/tx/tx3.jpg" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">青山</h4>
+												<div>
+													居然有国外！！好评！！
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="风华"
+												data-content="山高路远坑又深">
+												<img class="media-object" src="/static/img/tx/tx4.jpg" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">风华</h4>
+												<div>
+													居然有进度条？？
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="jnue"
+												data-content="深海茫茫不见天">
+												<img class="media-object" src="/static/img/tx/tx5.jpg" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">jnue</h4>
+												<div>
+													这玩意好用吗？？
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="xxxxxx"
+												data-content="xxxxxxxx">
+												<img class="media-object" src="/static/img/tx/tx_xx.jpg" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">xxxx</h4>
+												<div>
+													xxxxxxxxxxxxxxxxx
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="xxxxxx"
+												data-content="xxxxxxxx">
+												<img class="media-object" src="/static/img/tx/tx_xx.jpg" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">xxxx</h4>
+												<div>
+													xxxxxxxxxxxxxxxxx
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="xxxxxx"
+												data-content="xxxxxxxx">
+												<img class="media-object" src="/static/img/tx/tx_xx.jpg" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">xxxx</h4>
+												<div>
+													xxxxxxxxxxxxxxxxx
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="xxxxxx"
+												data-content="xxxxxxxx">
+												<img class="media-object" src="/static/img/tx/tx_xx.jpg" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">xxxx</h4>
+												<div>
+													xxxxxxxxxxxxxxxxx
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="xxxxxx"
+												data-content="xxxxxxxx">
+												<img class="media-object" src="/static/img/tx/tx_xx.jpg" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">xxxx</h4>
+												<div>
+													xxxxxxxxxxxxxxxxx
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#" data-container="body" data-placement="right"
+												data-toggle="popover" data-trigger="hover" title="xxxxxx"
+												data-content="xxxxxxxx">
+												<img class="media-object" src="/static/img/tx/tx_xx.jpg" alt="...">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">xxxx</h4>
+												<div>
+													xxxxxxxxxxxxxxxxx
+													<div class="dc">
+														<a href=""><span
+																class="glyphicon glyphicon-hand-right"></span></a>顶
+														<a href=""><span
+																class="glyphicon glyphicon-hand-down"></span></a>踩
+														<a href="#myModal" data-toggle="modal">回复</a>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+
+								<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel"
+									aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content hf">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"
+													aria-hidden="true">×</button>
+												<h4 class="modal-title" id="myModalLabel">
+													回复：
+												</h4>
+											</div>
+											<div class="modal-body">
+												<textarea name="" rows="10" cols=""></textarea>
+											</div>
+											<div class="modal-footer">
+												<button class="btn btn-warning" type="reset">重置</button>
+												<button class="btn btn-success" type="submit">提交</button>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fybox">
+						<ul class="pagination">
+							<li>
+								<a href="#">上一页</a>
+							</li>
+							<li class="active">
+								<a href="#">1</a>
+							</li>
+							<li>
+								<a href="#">2</a>
+							</li>
+							<li>
+								<a href="#">3</a>
+							</li>
+							<li>
+								<a href="#">4</a>
+							</li>
+							<li>
+								<a href="#">5</a>
+							</li>
+							<li>
+								<a href="#">6</a>
+							</li>
+							<li>
+								<a href="#">7</a>
+							</li>
+							<li>
+								<a href="#">8</a>
+							</li>
+							<li>
+								<a href="#">9</a>
+							</li>
+							<li>
+								<a href="#">10</a>
+							</li>
+							<li>
+								<a href="#">11</a>
+							</li>
+							<li>
+								<a href="#">下一页</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 partner">
+					<div class="title">合作伙伴</div>
+					<div class="partner_huoban">
+						<a href="http://huayu.baidu.com/" target="_blank">免费言情小说</a>
+						<a href="http://www.tapread.com" target="_blank">tapread</a>
+					</div>
+					<div class="partner-second">
+						<a href="http://www.xmkanshu.com/" target="_blank">熊猫看书</a>
+						<a href="http://huayu.baidu.com/" target="_blank">言情小说</a>
+						<a href="http://www.zongheng.com/zt/chuanyue/" target="_blank">穿越小说</a>
+						<a href="http://www.zongheng.com/" target="_blank">好看的小说</a>
+						<a href="http://www.rain8.com" target="_blank">雨枫轩</a>
+						<a href="http://www.3gsc.com.cn/" target="_blank">3G书城</a>
+						<a href="http://www.shuhai.com/" target="_blank">书海小说网</a>
+						<a href="http://b.faloo.com/" target="_blank">飞卢小说网</a>
+						<a href="http://www.lcread.com" target="_blank">连城读书</a>
+						<a href="http://www.kanshu.com/" target="_blank">看书网</a>
+						<a href="http://www.ltaaa.com" target="_blank">龙腾网</a>
+						<a href="http://www.lkong.net/forum.php" target="_blank">龙的天空</a>
+						<a href="http://www.manmankan.com/" target="_blank">漫漫看</a>
+						<a href="http://www.pingshu8.com/" target="_blank">评书</a>
+						<a href="http://www.sxcnw.net/" target="_blank">书香电子书</a>
+						<a href="http://www.yzmg.com/" target="_blank">亿智蘑菇</a>
+						<a href="http://chuangshi.qq.com" target="_blank">创世中文网</a>
+						<a href="http://www.duwenzhang.com/" target="_blank">文章阅读网</a>
+						<a href="http://www.geyanw.com/" target="_blank">人生格言</a>
+						<a href="http://www.hongshu.com/" target="_blank">红薯网</a>
+						<a href="http://book.114la.com/" target="_blank">114啦小说</a>
+						<a href="http://www.docin.com/" target="_blank">豆丁网</a>
+						<a href="http://www.lingyun5.com/" target="_blank">凌云文学网</a>
+						<a href="http://www.17k.com/" target="_blank">17k小说网</a>
+						<a href="http://www.xialv.com" target="_blank">周边好玩</a>
+						<a href="http://www.kuman.com/" target="_blank">酷漫网</a>
+						<a href="http://www.rongshuxia.com" target="_blank">华语文学榕树下</a>
+						<a href="http://book.sfacg.com/" target="_blank">轻小说</a>
+						<a href="http://yc.ireader.com.cn/" target="_blank">掌阅小说网</a>
+						<a href="http://www.znds.com" target="_blank">智能电视网</a>
+						<a href="http://www.ihuaben.com/" target="_blank">话本小说网</a>
+						<a href="http://www.zongheng.com/sitemapIndex.xml" target="_blank">经典小说</a>
+						<a href="http://book.qq.com/" target="_blank">腾讯文学</a>
+						<a href="http://www.xiang5.com" target="_blank">香网小说</a>
+						<a href="http://book.kongfz.com/" target="_blank">网上买书网站</a>
+						<a href="http://www.examw.com/" target="_blank">中华考试网</a>
+						<a href="http://www.ithome.com/" target="_blank">IT之家</a>
+						<a href="http://www.zuowen.com" target="_blank">作文网</a>
+						<a href="http://www.zongheng.com/company/link.html" target="_blank">更多</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<iframe src="/footer/" frameborder="0" width="100%" height="160px" scrolling="no"></iframe>
+
+		<script src="/static/js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

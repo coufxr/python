@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="73d5d134-336d-45bd-9313-129f22da1bc7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - book_web@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - book_web@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="book_web: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZQT8eLJnWotYTYJP3r1zaGxPAL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/GuanLdong/QidianScrapy.git" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\CODE\python\book_web\static" />
+      <recent name="F:\CODE\python\book_web\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.book_web">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="book_web" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bookDM" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="book_web" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book_scrapy/book_scrapy/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="F:\CODE\python\book_web\book_scrapy\book_scrapy\spiders\bookDM.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="book_web" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book_scrapy/book_scrapy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book_scrapy/book_scrapy/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="book_web" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/xiaoshuo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xiaoshuo/start.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="book_web" type="Python.DjangoServer" factoryName="Django server">
+      <module name="book_web" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="book_web.settings" />
+      </envs>
+      <option name="SDK_HOME" value="F:\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="127.0.0.1" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/index" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.start" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.bookDM" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73d5d134-336d-45bd-9313-129f22da1bc7" name="Default Changelist" comment="" />
+      <created>1584770159961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584770159961</updated>
+      <workItem from="1584770162938" duration="15835000" />
+      <workItem from="1584788956521" duration="3280000" />
+      <workItem from="1584845407419" duration="18594000" />
+      <workItem from="1584956578540" duration="321000" />
+      <workItem from="1585124784743" duration="624000" />
+      <workItem from="1586066347140" duration="8191000" />
+      <workItem from="1587134535810" duration="1399000" />
+      <workItem from="1588850923625" duration="1121000" />
+      <workItem from="1588859626964" duration="7490000" />
+      <workItem from="1588939192429" duration="7161000" />
+      <workItem from="1589028802175" duration="6569000" />
+      <workItem from="1589548602642" duration="120000" />
+      <workItem from="1589549373353" duration="4882000" />
+      <workItem from="1589637664083" duration="896000" />
+      <workItem from="1595225994377" duration="18000" />
+      <workItem from="1595226044381" duration="189000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="112" key="#HTTP_Proxy" timestamp="1584789113154">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="112" key="#HTTP_Proxy/0.0.1536.834@0.0.1536.834" timestamp="1584789113154" />
+    <state x="361" y="78" key="#Inspections" timestamp="1588863801114">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="78" key="#Inspections/0.0.1536.834@0.0.1536.834" timestamp="1588863801114" />
+    <state x="361" y="78" key="#Notifications" timestamp="1588939303468">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="78" key="#Notifications/0.0.1536.834@0.0.1536.834" timestamp="1588939303468" />
+    <state x="361" y="78" key="#SQL_Dialects" timestamp="1584853336977">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="78" key="#SQL_Dialects/0.0.1536.834@0.0.1536.834" timestamp="1584853336977" />
+    <state x="223" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588939315967">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="223" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1588939315967" />
+    <state x="449" y="155" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588850940399">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="449" y="155" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1588850940399" />
+    <state width="242" height="189" key="DatabaseViewActions_Filter" timestamp="1588948691701">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="242" height="189" key="DatabaseViewActions_Filter/0.0.1536.834@0.0.1536.834" timestamp="1588948691701" />
+    <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1589029702737">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1589029702737" />
+    <state width="1478" height="192" key="GridCell.Tab.0.bottom" timestamp="1589639028131">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1478" height="192" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1589639028131" />
+    <state width="1478" height="192" key="GridCell.Tab.0.center" timestamp="1589639028130">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1478" height="192" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1589639028130" />
+    <state width="1478" height="192" key="GridCell.Tab.0.left" timestamp="1589639028130">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1478" height="192" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1589639028130" />
+    <state width="1478" height="192" key="GridCell.Tab.0.right" timestamp="1589639028131">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1478" height="192" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1589639028131" />
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1584772034424">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584772034424" />
+    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1584772034423">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1584772034423" />
+    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1584772034423">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1584772034423" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1584772034424">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584772034424" />
+    <state width="1493" height="265" key="GridCell.Tab.2.bottom" timestamp="1584772034424">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584772034424" />
+    <state width="1493" height="265" key="GridCell.Tab.2.center" timestamp="1584772034424">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1584772034424" />
+    <state width="1493" height="265" key="GridCell.Tab.2.left" timestamp="1584772034424">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1584772034424" />
+    <state width="1493" height="265" key="GridCell.Tab.2.right" timestamp="1584772034424">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1584772034424" />
+    <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1584847018342">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="212" height="477" key="HiddenNamespacesPopup/0.0.1536.834@0.0.1536.834" timestamp="1584847018342" />
+    <state x="272" y="62" key="SettingsEditor" timestamp="1589028953234">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="272" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1589028953234" />
+    <state x="620" y="144" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1584790046079">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="620" y="144" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1536.834@0.0.1536.834" timestamp="1584790046079" />
+  </component>
+</project>
