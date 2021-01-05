@@ -5,6 +5,8 @@ from xlutils.copy import copy
 
 vuelist = []
 wb = None
+
+
 def openFile(path):
     global wb
     wb = xlrd.open_workbook(path)  # 打开t1
@@ -20,10 +22,10 @@ def splitVue():
         vue = v[1]
         vue = re.sub(r'_', "-", vue)  # 将空格替换为下划线
         str = vue.split("-")
-        if str[1] == "低压温控仪" or str[1] == "温控仪" or str[1]=="仪表":
+        if str[1] == "低压温控仪" or str[1] == "温控仪" or str[1] == "仪表":
             v[-1] = str[1] + "-" + str[2] + "-" + str[3] + "-" + str[4]
         elif str[1] == "低压仪表" or str[1] == "高压仪表" or str[1] == "综保":
-            if str[2]=="水泵控制室":
+            if str[2] == "水泵控制室":
                 v[-1] = str[1] + "-" + str[2] + "-" + str[3] + "-" + str[4]
             else:
                 v[-1] = str[1] + "-" + str[2]
@@ -53,6 +55,7 @@ def splitVue():
         else:
             print("不存在对应规则")
         # print(v)
+
 
 def savefile(wb, path):
     wb_w = copy(wb)
@@ -84,7 +87,7 @@ def main():
     # path = "E:\ZG\gz\zly\电力监控点表分化\中联-WR101-07_25.xls"
     openFile(path)
     splitVue()
-    savefile(wb,path)
+    savefile(wb, path)
 
 
 if __name__ == '__main__':
