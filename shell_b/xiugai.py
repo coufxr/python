@@ -29,17 +29,18 @@ def openid(filename):
         for i in range(rows):
             rv = rs.row_values(i)
             idlist.append(rv)
+
         for v in idlist:
             vue = v[2]
             str = vue.split("-")
+            # print(str)
             if re.match(r'^[\u4e00-\u9fa5]', vue) == None:
-                # print(str)
                 namestr = "{a}-{b}{c}-{d}".format(a=str[0], b=str[1], c=str[2], d=v[1][1:])
-                print(namestr)
+                # print(namestr)
                 name.append(namestr)
             else:
                 name.append(vue)
-        # update(stname)
+        update(stname)
         w2_sheet = wt.get_sheet(stname)
         k = 0
         for ret in name:
@@ -55,7 +56,7 @@ def update(stname):
     print(stname + "已提取并转换")
 
 def main():
-    openFolder(r"E:\ZG\gz\告警\列头柜机柜对应表")
+    openFolder(r"E:\ZG\gz\zly\列头柜机柜对应表\列头柜对应表二期")
     for filename in filelist:
         openid(filename)
         print(filename + "已完成！！")

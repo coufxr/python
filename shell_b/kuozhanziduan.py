@@ -17,18 +17,23 @@ def openFile(path):
         vue = v[1]
         vue = re.sub(r'_', "-", vue)  # 将空格替换为下划线
         str = vue.split("-")
-        if "壁挂仪表" in str[1]:
-            v[15] = str[1] + "-" + str[3] + "-" + str[4]+ "-" + str[5][:1]
-        elif "列头柜" in str[1]:
-            v[15] = str[2] + "-" + str[3] + "-" + str[4]
-        elif "ATS" in str[1]:
-            v[-1] = str[1] + "-" + str[3] + "-" + str[4] + "-" + str[5][:1]
-        # if len(str)==7:
-        #     str[-2]=str[-2][0]
-        # elif len(str)==6:
-        #     str[-1] = str[-1][0]
-        # v[15]=str[1]+"-"+str[3]+"-"+str[4]+"-"+str[5]
-        # print(v)
+        # if "壁挂仪表" in str[1]:
+        #     v[15] = str[1] + "-" + str[3] + "-" + str[4]+ "-" + str[5][:1]
+        # elif "列头柜" in str[1]:
+        #     if "二期采集" == str[2]:
+        #         v[15] = str[3] + "-" + str[4]+"-" + str[5]
+        #     else:
+        #         v[15] = str[2] + "-" + str[3] + "-" + str[4]
+        # elif "ATS" in str[1]:
+        #     v[-1] = str[1] + "-" + str[3] + "-" + str[4] + "-" + str[5][:1]
+        print(str)
+        if len(str)>6:
+            # str[-2]=str[-2][0]
+            v[15] =str[3] + "-" + str[4] + "-" + str[5]
+        elif len(str)==6:
+            str[-1] = str[-1][0]
+            v[15]=str[1]+"-"+str[3]+"-"+str[4]+"-"+str[5]
+        print(v)
     wb_w = copy(wb)
     ws_w = wb_w.get_sheet(0)
     k = 0
@@ -49,7 +54,7 @@ def main():
            目前没有其他拼接方法
            ''')
     # path = input("请输入需修改的文件名称：")
-    path=r"E:\ZG\gz\zly\20201225\中联-10-10-25-26.xls"
+    path=r"E:\ZG\gz\zly\20201225\中联-10-10-25-43.xls"
     openFile(path)
 if __name__ == '__main__':
     main()
