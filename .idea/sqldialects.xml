@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/shell_b/mysql_gaojin.py" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/shell_b/mysql_update_bata.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/shell_b/信号名称和告警事件修改.py" dialect="GenericSQL" />
     <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>

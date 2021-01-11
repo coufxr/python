@@ -1,12 +1,9 @@
 #!/use/bin/python
-import pymysql
-import xlrd
-import os, re
+import pymysql, xlrd, os
 
 xhlist = []
 sjlist = []
 sjtjlist = []
-
 fileNameList = []
 
 
@@ -18,8 +15,8 @@ def openFolder(path):
             fileNameList.append(filename)
 
 
-def init(moban):
-    t1 = xlrd.open_workbook(moban)  # 打开t1
+def moban(path):
+    t1 = xlrd.open_workbook(path)  # 打开t1
     for i in range(0, 3):
         if i == 0:
             t1shname = t1.sheets()[i]
@@ -44,25 +41,6 @@ def init(moban):
                     sjtjlist.append(rv)
 
 
-##处理信号表的名称
-def xh():
-    for v in xhlist:
-        vue = re.sub(r'_', "-", v[1])  # 替换
-        str = vue.split("-")
-        if str[-1] == "1":
-            v[1] = str[-2]
-        elif str[0] == "设备通讯状态":
-            v[1] = str[0]
-        ##判断最后一个是否是以数字开头，如果是就不要
-        elif re.search("^[0-9]", str[-1]) != None:
-            v[1] = str[-1][1:]
-        # elif "通讯状态" in str[-1]:
-        #     v[1] = str[-1][1:]
-        else:
-            v[1] = str[-1]
-    print("信号名称处理完毕")
-
-
 # 查询获取到设备的设备id
 def get_eqid(cursor, filename):
     cursor.execute(
@@ -76,18 +54,18 @@ def update_xh(cursor, eqId):
     # 查询设备对应的信号表
     cursor.execute(
         "SELECT * FROM cfgsignaltemplate WHERE EQUIPTEMPLATEID = '%s'" % (eqId))
-    template = cursor.fetchall()
-    # # 新的信号名
-    # for xhv in xhlist:
-    #     newName=xhv[1]
-    # # 信号表，每个信号对应的id
+    temp = cursor.fetchall()
+    ##将元组转为列表
+    template = list(list(items) for items in list(temp))
+    ##将列表按照二维首列进行排序
+    template = sorted(template, key=(lambda x: x[0]))
     # for eq in template:
-    #     sgId=eq[0]
+    #     print(eq)
     ##更新数据库
     for (xh, sg) in zip(xhlist, template):
         newName = xh[1]  ##新的信号名
         sgId = sg[0]  ##信号id
-        # print(newName, sgId)
+        # print(newName, sgId,sg[3])
         cursor.execute(
             "UPDATE cfgsignaltemplate SET SIGNALNAME='%s' WHERE EQUIPTEMPLATEID = '%s' AND SIGNALID ='%s' " % (
                 newName, eqId, sgId))
@@ -170,22 +148,21 @@ def delete_gj(db, cursor, eqId):
 def main():
     print('''
     注意事项：
-    本脚本的数据库连接为：'localhost', 'root', 'root', 'sgdatabase'
-    请确定模板的正确性，可以处理模板的信号名称，但不一定适用
-    需处理文件夹为模板的同类型设备
-    数据库已存在的告警和告警条件会被更新掉
-    不需要处理的设备表不要放入需处理的文件夹内
+    1.本脚本的数据库连接为：'localhost', 'root', 'root', 'sgdatabase'
+    2.请确定模板的正确性，否则会中断程序运行
+    3.需处理文件夹为模板的同类型设备
+    4.数据库已存在的告警和告警条件会被更新掉
+    5.不需要处理的设备表不要放入需处理的文件夹内
+    6.重点：不会报错！！！发生错误会直接结束程序窗口！！！
+    
+    
     ''')
     ##将模板中三个表取出来
     path = input("请输入模板路径+名称：")
-    # path = r"H:\gz\zly\二期\壁挂仪表-CRAH模板.xls"
-    init(path)
+    moban(path)
     ##获取需处理文件夹
-    filePath = input("请输入需告警仪表文件夹：")
-    # filePath=r"H:\gz\zly\二期\bg"
-    openFolder(filePath)
-    ##处理模板的信号，新的信号名
-    xh()
+    ffPath = input("请输入需告警仪表文件夹：")
+    openFolder(ffPath)
     ##打开数据库
     db = pymysql.connect("localhost", "root", "root", "sgdatabase")
     cursor = db.cursor()
