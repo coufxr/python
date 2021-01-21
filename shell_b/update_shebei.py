@@ -1,10 +1,12 @@
 #!/use/bin/python
-import pymysql, xlrd, os
+import pymysql, xlrd, re, time, os, tkinter
+from tkinter import filedialog
 
 xhlist = []
 sjlist = []
 sjtjlist = []
 fileNameList = []
+meaninglist = {}
 
 
 def openFolder(path):
@@ -49,7 +51,7 @@ def get_eqid(cursor, filename):
     return eqId
 
 
-# 更新信号名称
+# 更新信号表
 def update_xh(cursor, eqId):
     # 查询设备对应的信号表
     cursor.execute(
@@ -62,14 +64,56 @@ def update_xh(cursor, eqId):
     # for eq in template:
     #     print(eq)
     ##更新数据库
+    meaninglist.clear()
     for (xh, sg) in zip(xhlist, template):
-        newName = xh[1]  ##新的信号名
         sgId = sg[0]  ##信号id
-        # print(newName, sgId,sg[3])
+        newName = xh[1]  ##新的信号名
+        sgtype = xh[3]
+        chan = xh[5]
+        datatype = xh[4]
+        unit = xh[6]
+        kzzd = xh[15]
+        saveval = xh[10]
+        absval = xh[11]
+        perval = xh[12]
+        tjval = xh[13]
+        showjd = xh[9]
+        ms = xh[14]
+        # cursor.execute(
+        #     "UPDATE cfgsignaltemplate SET SIGNALNAME='%s' WHERE EQUIPTEMPLATEID = '%s' AND SIGNALID ='%s' " % (
+        #         newName, eqId, sgId))
         cursor.execute(
-            "UPDATE cfgsignaltemplate SET SIGNALNAME='%s' WHERE EQUIPTEMPLATEID = '%s' AND SIGNALID ='%s' " % (
-                newName, eqId, sgId))
-    print("    ", eqId, "信号名更新完成")
+            "UPDATE cfgsignaltemplate SET "
+            "SIGNALNAME = '%s', SIGNALTYPE = '%s',  CHANNELNO = '%s', "
+            "DATATYPE = '%s', UNIT = '%s', EXTENDFIELD1 = '%s', STOREINTERVAL = '%s', ABSVALUETHRESHOLD = '%s', "
+            "PERCENTTHRESHOLD = '%s', STATISTICPERIOD = '%s', SHOWPRECISION = '%s', DESCRIPTION = '%s' WHERE "
+            "EQUIPTEMPLATEID = '%s' AND SIGNALID = '%s'"
+            % (newName, sgtype, chan, datatype, unit, kzzd, saveval, absval, perval, tjval, showjd, ms, eqId, sgId))
+    print("    ", eqId, "信号表更新完成")
+
+
+# 更新信号含义
+def update_meaning(cursor, eqId):
+    for xh in xhlist:
+        if xh[8] != "":
+            retlist = []
+            str = xh[8].split(";")
+            for i in range(len(str)):
+                if str[i]:
+                    retlist.append(str[i].split(':'))
+            # print(retlist)
+            meaninglist[xh[0]] = retlist
+    # 删除信号含义
+    cursor.execute("DELETE FROM cfgsignalmeaning WHERE EQUIPTEMPLATEID = '%s'" % (eqId))
+    print("    ", eqId, "删除信号含义成功！")
+    # 添加信号含义
+    for k, v in meaninglist.items():
+        for y in v:
+            # print(k,y[0],y[1])
+            cursor.execute(
+                "INSERT INTO cfgsignalmeaning(SIGNALID,EQUIPTEMPLATEID,MEANING,STATEVALUE)VALUES('%s','%s','%s','%s')" % (
+                    k, eqId, y[1], y[0]))
+    print("    ", eqId, "添加信号含义成功！")
 
 
 # 添加告警事件
@@ -116,7 +160,7 @@ def insert_gjsj(cursor, eqId):
 # 判断是否存在对应的事件，事件条件
 # 存在：删除已存在的告警事件和事件条件，再添加
 # 不存在：添加
-def delete_gj(db, cursor, eqId):
+def delete_gj(cursor, eqId):
     cursor.execute(
         "SELECT * FROM cfgeventtemplate WHERE EQUIPTEMPLATEID = '%s'" % (eqId))
     gj_tmp = cursor.fetchall()
@@ -148,35 +192,49 @@ def delete_gj(db, cursor, eqId):
 def main():
     print('''
     注意事项：
-    1.本脚本的数据库连接为：'localhost', 'root', 'root', 'sgdatabase'
-    2.请确定模板的正确性，否则会中断程序运行
-    3.需处理文件夹为模板的同类型设备
-    4.数据库已存在的告警和告警条件会被更新掉
-    5.不需要处理的设备表不要放入需处理的文件夹内
-    6.重点：不会报错！！！发生错误会直接结束程序窗口！！！
-    
-    
+        1.本脚本的数据库连接为：'localhost', 'root', 'root', 'sgdatabase'
+        2.请确定模板的正确性，否则会中断程序运行
+        3.需处理文件夹为模板的同类型设备
+        4.数据库已存在的告警和告警条件会被更新掉
+        5.不需要处理的设备表不要放入需处理的文件夹内
+        6.使用前，数据库请备份！！
+        7.重点：不会报错！！！发生错误会直接结束程序窗口！！！
     ''')
+    input("按下回车开始")
+    ##将获取模板表和文件夹GUI化选择
+    root = tkinter.Tk()
+    root.withdraw()
     ##将模板中三个表取出来
-    path = input("请输入模板路径+名称：")
-    moban(path)
+    ##获取模板的路径和名字
+    print("请选择模板文件：")
+    filepath = filedialog.askopenfilename(title='打开模板文件', filetypes=[('Excel', '*.xls')])
+    print("模板的路径：", filepath)
+    moban(filepath)
     ##获取需处理文件夹
-    ffPath = input("请输入需告警仪表文件夹：")
-    openFolder(ffPath)
+    ##获取需处理文件夹的路径
+    print("请选择文件夹：")
+    folderpath = filedialog.askdirectory()
+    print("需处理的路径：", folderpath)
+    time_start = time.time()  # 开始计时
+    openFolder(folderpath)
     ##打开数据库
     db = pymysql.connect("localhost", "root", "root", "sgdatabase")
     cursor = db.cursor()
-
     ##更新数据库，文件名相对应的
     for filename in fileNameList:
+        print(filename + "更新开始！！")
         eqId = get_eqid(cursor, filename)
         update_xh(cursor, eqId)
-        delete_gj(db, cursor, eqId)
-        print(filename + "已更新完成！！")
+        update_meaning(cursor, eqId)
+        delete_gj(cursor, eqId)
+        print(filename + "已更新完成！！\n")
     ##关闭数据库
     cursor.close()
     db.close()
-    input("输入任意字符退出")
+    time_end = time.time()  # 结束计时
+    time_c = time_end - time_start  # 运行所花时间
+    print('更新耗时：', time_c, 's')
+    input("按下回车退出")
 
 
 if __name__ == '__main__':
