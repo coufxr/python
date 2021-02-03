@@ -8,8 +8,9 @@ py的学习记录
 
 ### 文件夹中文件名的获取
 
- ###1. 嵌套版
- #####带路径获取
+### 1. 嵌套版  
+
+##### 带路径获取
  ```python
 def get_filepath(path):
     for root, dirs, files in os.walk(path, True):
@@ -18,7 +19,7 @@ def get_filepath(path):
 ```
  - os.path.join(root, f)表示将文件夹路径和文件名相加
 
- ###2. 不嵌套
+ ### 2. 不嵌套
 1. 也带路径获取，但只会获取当前文件夹中，不包括下一级文件夹  
 2. 使用了re 正则进行筛选匹配
  ```python
@@ -28,7 +29,7 @@ def get_filepath(path):
         if re.search(r'.xls$', filepath) != None:
             print(filepath)
 ```
-###re 正则
+### re 正则
 ```
 re.match(r'[\u4e00-\u9fa5]', str)
 ```
