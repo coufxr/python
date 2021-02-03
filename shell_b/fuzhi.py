@@ -9,7 +9,6 @@ sjtjlist = []
 filelist = []
 
 def openFolder(folder):
-    dirs = os.listdir(folder)
     for file in os.listdir(folder):
         file_path = os.path.join(folder, file)
         if re.search(r'.xls$', file_path) != None:

@@ -1,5 +1,5 @@
 #!/use/bin/python
-import pymysql, xlrd, re, time, os, tkinter
+import pymysql, xlrd, time, os, tkinter
 from tkinter import filedialog
 
 xhlist = []

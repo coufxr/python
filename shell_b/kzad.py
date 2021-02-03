@@ -1,6 +1,6 @@
 #!/use/bin/python
-import xlrd
-import re
+import xlrd,re,tkinter
+from tkinter import filedialog
 from xlutils.copy import copy
 
 vuelist = []
@@ -31,27 +31,19 @@ def splitVue():
                 v[-1] = str[1] + "-" + str[2]
         elif str[1] == "UPS":
             if str[2] == "UPS":
-                v[-1] = str[2] + "-" + str[3] + "-" + str[4]
+                v[-1] = str[2] + "_" + str[3] + "-" + str[4]
             else:
-                v[-1] = str[1] + "-" + str[2] + "-" + str[3]
+                v[-1] = str[1] + "_" + str[2] + "-" + str[3]
         elif str[1] == "列头柜":
             v[-1] = str[2] + "-" + str[3] + "-" + str[4]
         elif str[1] == "ATS" or str[1] == "壁挂仪表":
-            v[-1] = str[1] + "-" + str[2] + "-" + str[3] + "-" + str[4]
+            v[-1] = str[1] + "_" + str[2] + "_" + str[3] + "-" + str[4]
         elif str[1] == "直流屏":
             v[-1] = str[1]
         elif str[1] == "柴发":
-            if str[3] != "通讯状态":
-                v[-1] = str[1] + "-" + str[2] + "-" + str[3][:3]
-            else:
-                v[-1] = str[1] + "-" + str[2]
-                print(v, "柴发此项需检查修改")
+            v[-1] = str[1] + "_" + str[2]
         elif str[1] == "油路":
-            Newyl = re.findall(r'^[a-zA-Z]\d\d', str[3])
-            if len(Newyl) != 0:
-                v[-1] = str[1] + "-" + str[2] + "-" + Newyl[0]
-            else:
-                v[-1] = str[1] + "-" + str[2]
+                v[-1] = str[1] + "_" + str[2]
         else:
             print("不存在对应规则")
         # print(v)
@@ -65,7 +57,7 @@ def savefile(wb, path):
         for w in range(len(ret)):
             ws_w.write(k, w, ret[w])
         k = k + 1
-
+        print(ret)
     wb_w.save(path)
     print("扩展字段修改完成")
 
@@ -83,8 +75,15 @@ def main():
             仪表、温控仪、油路、柴发会将名称带上，请注意！
             程序执行完请检查excel表，可能存在错误
            ''')
-    path = input("请输入需修改的文件名称：")
-    # path = "E:\ZG\gz\zly\电力监控点表分化\中联-WR101-07_25.xls"
+    # path = input("请输入需修改的文件名称：")
+    path = "H:\gz\zly\电力监控点表分化\中联-WR101-01\中联-WR101-01.xls"
+    root = tkinter.Tk()
+    root.withdraw()
+    ##将模板中三个表取出来
+    ##获取模板的路径和名字
+    print("请选择模板文件：")
+    path = filedialog.askopenfilename(title='打开模板文件', filetypes=[('Excel', '*.xls')])
+    print("模板的路径：", path)
     openFile(path)
     splitVue()
     savefile(wb, path)
