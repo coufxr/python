@@ -3,13 +3,12 @@ py的学习记录
 
 ### 二维列表排序方式
 >sorted(listName,key=(lambda x:[y]))
- 1. [~]中可以添加多个值，值的顺序为排序的优先级  
- 2. [~]中可以遍历x，即：x:[x[0]]
+ 1. [~]中可以添加多个值，值的顺序为排序的**优先级**  
+ 2. [~]中可以遍历x，即：x:[x[0][:5]]
 
 ### 文件夹中文件名的获取
 
 #### 1. 嵌套版  
-带路径获取
  ```python
 def get_filepath(path):
     for root, dirs, files in os.walk(path, True):
@@ -27,9 +26,15 @@ def get_filepath(path):
         filepath = os.path.join(path, file)
         if re.search(r'.xls$', filepath) != None:
             print(filepath)
-```
+```  
+####3.
+def openFolder(path):
+    for root, dirs, files in os.walk(path, True):
+        for f in files:
+            filename = f[0:-4]
+            fileNameList.append(filename)
 #### re 正则
-```
+```python
 re.match(r'[\u4e00-\u9fa5]', str)
 ```
 - [\u4e00-\u9fa5] 匹配中文字符
