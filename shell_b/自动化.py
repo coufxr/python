@@ -186,7 +186,7 @@ def insert_gjsj(cursor, eqId):
         startys = ret[7]  # 开始延时
         if ret[10] == "":
             ret[10] = 0
-        endys = 0  # ret[10]  # 结束延时
+        endys = ret[10]  # 结束延时
         hanyi = ret[3]  # 条件含义
         lv = ret[4]  # 条件等级
         # print(ret)
@@ -253,6 +253,16 @@ def update_Meaning(cursor, eqId):
 
 
 def main():
+    print('''
+    注意事项：
+        1.本脚本的数据库连接为：'localhost', 'root', 'root', 'sgdatabase';使用本脚本前，数据库请备份！！
+        2.扩展字段目前对字段格式要求较高，请谨慎使用。
+        3.请确定模板的正确性，需要处理的文件夹内应为模板的同类型设备。
+        4.本脚本是根据需处理文件夹内的“文件名”进行处理的，与文件本身无关！
+        5.所有处理不包含“信号表达式”。
+        4.请注意本脚本不会报错！！！如发生错误会直接结束程序窗口！
+    ''')
+    input("按下任意键开始")
     while True:
         print('''
         ---------------------------------
@@ -268,8 +278,8 @@ def main():
             return
         elif inp == "1":
             print('''
-            ---------------------------------
-            字词间分割请使用‘-’、‘_’这两种字符,不可存在空格
+            -----------------------------------------------
+            字段分割请使用‘-’、‘_’这两种字符,不可存在空格
             目前仅支持标准格式:  P7_列头柜_M101-RPP-1A_通讯状态
             ''')
             path = open_Moban_Ui()
@@ -277,10 +287,8 @@ def main():
             splitVue()
             savefile(path)
         elif inp == "2":
-            path = open_Moban_Ui()
-            openMoban(path)
-            folderpath = open_Folder_Ui()
-            openFolder(folderpath)
+            openMoban(open_Moban_Ui())
+            openFolder(open_Folder_Ui())
             db, cursor = open_Mysql()
             for filename in fileNameList:
                 eqId = get_eqid(cursor, filename)
@@ -288,10 +296,8 @@ def main():
                 print(filename + "  的信号名称已更新完成！！")
             close_Mysql(cursor, db)
         elif inp == "3":
-            path = open_Moban_Ui()
-            openMoban(path)
-            folderpath = open_Folder_Ui()
-            openFolder(folderpath)
+            openMoban(open_Moban_Ui())
+            openFolder(open_Folder_Ui())
             db, cursor = open_Mysql()
             for filename in fileNameList:
                 eqId = get_eqid(cursor, filename)
@@ -299,10 +305,8 @@ def main():
                 print(filename + "  的告警和告警含义已更新完成！！")
             close_Mysql(cursor, db)
         elif inp == "4":
-            path = open_Moban_Ui()
-            openMoban(path)
-            folderpath = open_Folder_Ui()
-            openFolder(folderpath)
+            openMoban(open_Moban_Ui())
+            openFolder(open_Folder_Ui())
             db, cursor = open_Mysql()
             for filename in fileNameList:
                 eqId = get_eqid(cursor, filename)
@@ -311,10 +315,8 @@ def main():
                 print(filename + "  信号表已更新完成！！")
             close_Mysql(cursor, db)
         elif inp == "5":
-            path = open_Moban_Ui()
-            openMoban(path)
-            folderpath = open_Folder_Ui()
-            openFolder(folderpath)
+            openMoban(open_Moban_Ui())
+            openFolder(open_Folder_Ui())
             db, cursor = open_Mysql()
             for filename in fileNameList:
                 eqId = get_eqid(cursor, filename)
