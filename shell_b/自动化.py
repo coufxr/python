@@ -198,10 +198,11 @@ def insert_gjsj(cursor, eqId):
     print("    ", eqId, "添加告警事件条件完成")
 
 
-# 判断是否存在对应的事件，事件条件
-# 存在：删除已存在的告警事件和事件条件，再添加
-# 不存在：添加
+
 def update_Gj(cursor, eqId):
+    # 判断是否存在对应的事件，事件条件
+    # 存在：删除已存在的告警事件和事件条件，再添加
+    # 不存在：添加
     cursor.execute(
         "SELECT * FROM cfgeventtemplate WHERE EQUIPTEMPLATEID = '%s'" % (eqId))
     gj_tmp = cursor.fetchall()

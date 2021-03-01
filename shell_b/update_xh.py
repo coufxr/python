@@ -10,7 +10,6 @@ fileNameList = []
 def openFolder(path):
     for root, dirs, files in os.walk(path, True):
         for f in files:
-            # filename = os.path.join(root, f)
             filename = f[0:-4]
             fileNameList.append(filename)
 
@@ -114,9 +113,14 @@ def insert_gjsj(cursor, eqId):
 
 
 # 判断是否存在对应的事件，事件条件
-# 存在：删除已存在的告警事件和事件条件，再添加
-# 不存在：添加
+    # 存在：删除已存在的告警事件和事件条件，再添加
+    # 不存在：添加
 def delete_gj(cursor, eqId):
+    """
+
+    :param cursor: 游标
+    :param eqId: 设备id
+    """
     cursor.execute(
         "SELECT * FROM cfgeventtemplate WHERE EQUIPTEMPLATEID = '%s'" % (eqId))
     gj_tmp = cursor.fetchall()

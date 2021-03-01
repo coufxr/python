@@ -28,11 +28,14 @@ def get_filepath(path):
             print(filepath)
 ```  
 ####3.
+```python
 def openFolder(path):
     for root, dirs, files in os.walk(path, True):
         for f in files:
             filename = f[0:-4]
             fileNameList.append(filename)
+```
+
 #### re 正则
 ```python
 re.match(r'[\u4e00-\u9fa5]', str)

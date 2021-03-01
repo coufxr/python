@@ -61,29 +61,22 @@ def savefile(wb, path):
     wb_w.save(path)
     print("扩展字段修改完成")
 
-
-def main():
-    print('''
-            名称内不能存在空格，建议提前替换、去除
-            目前支持:
-                仪表(高压、低压、综保、壁挂)
-                温控仪(低压)、UPS
-                ATS、油路、柴发、直流屏
-            根据"_"或者"-"进行分割，请将各个名称中分割好,否则存在拼接错误
-            例如：低压仪表12AA11；请将其替换为：低压仪表-12AA11，或者：低压仪表_12AA11
-            请注意直流屏的名称！！！
-            仪表、温控仪、油路、柴发会将名称带上，请注意！
-            程序执行完请检查excel表，可能存在错误
-           ''')
-    # path = input("请输入需修改的文件名称：")
-    path = "H:\gz\zly\电力监控点表分化\中联-WR101-01\中联-WR101-01.xls"
+def open_Moban_Ui():
     root = tkinter.Tk()
     root.withdraw()
-    ##将模板中三个表取出来
-    ##获取模板的路径和名字
     print("请选择模板文件：")
     path = filedialog.askopenfilename(title='打开模板文件', filetypes=[('Excel', '*.xls')])
     print("模板的路径：", path)
+    return path
+def open_Folder_Ui():
+    root = tkinter.Tk()
+    root.withdraw()
+    print("请选择文件夹：")
+    folderpath = filedialog.askdirectory()
+    print("需处理的路径：", folderpath)
+    return folderpath
+def main():
+    path= open_Moban_Ui()
     openFile(path)
     splitVue()
     savefile(wb, path)
